@@ -22,4 +22,4 @@ jobs:
     - name: Build the Docker image
       run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/retdec . -f Dockerfile.dev 
     - name: Push Docker image  
-      run: docker push
+      run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/retdec
